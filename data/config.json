@@ -1,0 +1,20 @@
+{
+    "data": {
+        "x0": 1,
+        "y0": 4,
+        "x1": 5,
+        "y1": 38
+    },
+    "columnsInfo": ["name", "max", "max", "max", "min"],
+    "lowBorders": ["", 100, 200, 200, 1000],
+    "suboptimization": {
+        "mainCriteriaIndex": 1,
+        "lowBorders": ["", 100, 200, 200, 1000]
+    },
+    "lexicographicOptimization": {
+        "sortedCriterias": [1, 2, 4, 3]
+    },
+    "generalCriteriaInfo": {
+        "weights": [0, 0.35, 0.2, 0.15, 0.3]
+    }
+}
