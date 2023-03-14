@@ -15,6 +15,7 @@ module.exports.applyLowBorders = (rows, lowBorders, columnsInfo) => {
             } else if (columnsInfo[index] == 'min') {
                 return rowItem <= lowBorders[index]
             }
+            return true
         })
     })
 }

@@ -6,7 +6,7 @@
         "y1": 38
     },
     "columnsInfo": ["name", "max", "max", "max", "min"],
-    "lowBorders": ["", 100, 200, 200, 1000],
+    "lowBorders": ["", 2, 2, 40, 20000],
     "suboptimization": {
         "mainCriteriaIndex": 1,
         "lowBorders": ["", 100, 200, 200, 1000]
