@@ -22,7 +22,7 @@ class ParetoSolver {
     solve(rows) {
         const paretoRows = []
         for (let i = 0; i < rows.length; i++) {
-            if (rows.some((row, index) => i != index && !this.paretoDominates(row, rows[i]))) {
+            if (!rows.some((row) => this.paretoDominates(row, rows[i]))) {
                 paretoRows.push(rows[i])
             }
         }
