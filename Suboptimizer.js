@@ -1,4 +1,4 @@
-const { columnDominates, applyLowBorders, findRowByBest } = require('./Utils.js')
+const { applyLowBorders, findRowByBest } = require('./Utils.js')
 
 class Suboptimizer {
     constructor({ columnsInfo, suboptimization }) {

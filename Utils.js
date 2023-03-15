@@ -41,3 +41,7 @@ module.exports.findRowByBest = (rows, columnsInfo, compareColumnIndex) => {
     }
     return chosenRow
 }
+
+module.exports.columnIsComparable = (columnIndex, columnsInfo) => {
+    return columnsInfo[columnIndex] == 'min' || columnsInfo[columnIndex] == 'max'
+}

@@ -1,4 +1,4 @@
-const { columnDominates } = require('./Utils.js')
+const { columnDominates, columnIsComparable } = require('./Utils.js')
 
 class ParetoSolver {
     constructor(columnsInfo) {
@@ -6,6 +6,8 @@ class ParetoSolver {
     }
 
     paretoDominates(row1, row2) {
+        if (row1.length != row2.length)
+            throw new Error('Pareto domination failes: length of rows should be equal')
         let hasBetterColumn = false
         for (let i = 0; i < row1.length; i++) {
             if (columnDominates(row2, row1, i, this.columnsInfo)) {
@@ -20,7 +22,7 @@ class ParetoSolver {
     solve(rows) {
         const paretoRows = []
         for (let i = 0; i < rows.length; i++) {
-            if (!rows.every((row, index) => index == i || this.paretoDominates(row, rows[i]))) {
+            if (rows.some((row, index) => i != index && !this.paretoDominates(row, rows[i]))) {
                 paretoRows.push(rows[i])
             }
         }
